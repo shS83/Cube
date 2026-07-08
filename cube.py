@@ -40,19 +40,19 @@ VERTICES = (
 )
 
 EDGES = (
-    # Ensimmäinen neliö
+    # Ensimmäinen neliö.
     (0, 1),
     (1, 2),
     (2, 3),
     (3, 0),
 
-    # Toinen neliö
+    # Toinen neliö.
     (4, 5),
     (5, 6),
     (6, 7),
     (7, 4),
 
-    # Neliöt toisiinsa yhdistävät reunat
+    # Neliöt toisiinsa yhdistävät reunat.
     (0, 4),
     (1, 5),
     (2, 6),
