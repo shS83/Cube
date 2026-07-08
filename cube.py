@@ -129,8 +129,8 @@ def initialize_opengl() -> None:
 	# Taustaväri: hyvin tumma siniharmaa.
 	glClearColor(
 		0.02,
-		0.025,
-		0.04,
+		0.02,
+		0.09,
 		1.0,
 	)
 
