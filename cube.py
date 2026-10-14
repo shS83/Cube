@@ -38,6 +38,11 @@ from OpenGL.GL import (
 	glTexCoord2f,
 	glTexImage2D,
 	glTexParameteri,
+	GL_BLEND,
+	GL_ONE_MINUS_SRC_ALPHA,
+	GL_SRC_ALPHA,
+	glBlendFunc,
+	glColor4f,
 )
 from OpenGL.GLU import gluPerspective
 
@@ -133,6 +138,9 @@ def initialize_opengl():
 	glEnable(GL_DEPTH_TEST)
 	glDepthFunc(GL_LESS)
 
+	glEnable(GL_BLEND)
+	glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA)
+
 	glClearColor(0.03, 0.03, 0.05, 1.0)
 
 def load_texture(filename):
@@ -206,8 +214,8 @@ def draw_faces(texture_id):
 
 
 def draw_edges():
-	glColor3f(1.0, 1.0, 1.0)
-	glLineWidth(2.0)
+	glColor4f(1.0, 1.0, 1.0, 0.20)
+	glLineWidth(1.5)
 
 	glBegin(GL_LINES)
 
